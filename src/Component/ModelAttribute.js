@@ -19,7 +19,7 @@ const stateMachine = {
 
 // A reducer that specifies how that's it's going to kind of like add the functionality 
 // that will kind of wire those states together and allow the transitions to happen.
-const reducer = () => {
+const reducer = (currentState, event) => {
     
 }
 

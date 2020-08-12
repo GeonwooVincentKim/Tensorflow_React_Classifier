@@ -18,6 +18,7 @@
 - 1. A reducer that specifies how that's it's going to kind of like add the functionality that will kind of wire those states together and allow the transitions to happen.
 - 2. This reducer will take the current state and it'll take an event which is going to be a string in this case.
 - 3. For example, when the event gets fired. (I'm not sure this case is suitable to this comment..)
+- 4. A reducer will take the current state and it'll take an event which is going to be a string in our case as a 'reducer' parameters.
 
 ### Form of Reducer
 - 1. Applying Function.
