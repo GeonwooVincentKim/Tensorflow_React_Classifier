@@ -6,12 +6,14 @@ import logo from './logo.svg';
 import './App.css';
 
 
-function App() {
-  return (
-    <div className="App">
-        <ModelAttribute/>
-    </div>
-  );
+class App extends React.Component {
+  render(){
+    return (
+      <div className="App">
+          <ModelAttribute/>
+      </div>
+    );
+  };
 };
 
 export default App;
