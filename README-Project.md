@@ -21,6 +21,13 @@
 - 4. A reducer will take the current state and it'll take an event which is going to be a string in our case as a 'reducer' parameters.
 - 5. The reducer cause the app to be in a new state.
 
+- 6. Return state-machine States and then current-States with on event. 
+     Or, Return Initial-States.
+- 7. If is on the State, Return states-list. 
+     Otherwise, Return initial which is not in states-list.
+
+
+
 ### Form of Reducer
 - 1. Applying Function.
     ```
@@ -49,6 +56,63 @@
 
 
 ## About ModelAttribute
+
+### How to solve when shows syntax-error by inserting const into class??
+- 1. Applying Function and Applying Const works, but the Class doesn't work because it occurs Syntax-Errors.
+- 2. To solve this problem, don't use the class when you trying to use 'const' into this project.
+- 3. Code
+    ```
+    function ModelAttribute() {
+    const [state, dispatch] = useReducer();
+        return (
+            <div className="tensorflow-example">
+                <h2 className="Testing">
+                    Testing
+                    <p className="Testing-Ptag">
+                        Testing..
+                    </p>
+                </h2>
+            </div>   
+        );
+    };
+    ```
+
+    ```
+    const ModelAttribute = () => {
+        const [state, dispatch] = useReducer();
+        return(
+            <div className="tensorflow-example">
+            <h2 className="Testing">
+                Testing
+                <p className="Testing-Ptag">
+                    Testing..
+                </p>
+            </h2>
+            </div>   
+        );
+    }
+    ```
+
+- 4. Error-part
+    ```
+    class ModelAttribute extends React.Component{
+        const [state, dispath] = useReducer();   // Syntax-Errors has occured because you used const.
+    
+        render(){
+            return(
+                <div className="tensorflow-example">
+                <h2 className="Testing">
+                    Testing
+                    <p className="Testing-Ptag">
+                        Testing..
+                    </p>
+                </h2>
+                </div>   
+            );
+        };
+    }
+    ```
+
 
 ### Form of ModelAttribute
 - 1. Applying Function.

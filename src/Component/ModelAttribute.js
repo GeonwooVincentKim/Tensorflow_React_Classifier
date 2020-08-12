@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState, useReducer } from 'react';
 import update from 'immutability-helper';
 import * as tf from '@tensorflow/tfjs';
 
@@ -21,28 +21,23 @@ const stateMachine = {
 
 // A reducer that specifies how that's it's going to kind of like add the functionality 
 // that will kind of wire those states together and allow the transitions to happen.
-const reducer = (currentState, event) => 
-    // Return state-machine States and then current-States with on event.
-    // Or, Return Initial-States.
-
-    // If is on the State, Return states-list,
-    // Otherwise, Return initial which is not in states-list.
-    stateMachine.states[currentState].on[event] || stateMachine.initial;
+const reducer = (currentState, event) => stateMachine.states[currentState].on[event] || stateMachine.initial;
 
 
-class ModelAttribute extends React.Component{
-    render(){
-        return(
-            <div className="tensorflow-example">
+function ModelAttribute() {
+    // Put that hook into our components in order to get a dispatch and the current state.
+    // Call the 'state' and 'dispatch' and use 'reducer'.
+    const [state, dispatch] = useReducer();
+    return (
+        <div className="tensorflow-example">
             <h2 className="Testing">
                 Testing
                 <p className="Testing-Ptag">
                     Testing..
                 </p>
             </h2>
-            </div>   
-        );
-    };
-}
+        </div>   
+    );
+};
 
 export default ModelAttribute;
