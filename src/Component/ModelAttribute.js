@@ -6,8 +6,8 @@ import './ModelAttribute.css';
 
 // Define rules that govern what transitions will happend
 // based on which events that are triggered.
-
 // Order of executing Training-Model and discriminate images.
+
 const stateMachine = {
     iniital: { on: {next: 'loadingModel'} }, 
     loadingModel: { on: {loadingModel: 'awaiting'}},
@@ -17,27 +17,67 @@ const stateMachine = {
     complete: { on: {awating: 'awaitingUpload'}}, 
 }
 
-// A reducer that specifies how that's it's going to kind of like add the
-// functionality that will kind of wire those states together and allow the 
-// transitions to happen. 
-// For example, when I'd event gets fired. 
-// (I'm not sure this case is suitable to this comment..)
+
+/* 
+    - 1. A reducer that specifies how that's it's going to kind of like add the
+    functionality that will kind of wire those states together and allow the
+    transitions to happen.
+
+    - 2. This reducer will take the current state and it'll take an event 
+         which is going to be a string in this case.
+
+    - 3. For example, when I'd event gets fired. (I'm not sure this case is suitable to this comment..)
+    
+    - 4. You can convert this code as 
+    function reducer() {
+
+    }
+    or
+    class reducer extends.React.Component{
+        render(){
+            return(
+                <div className="Example"></div>
+            );
+        }
+    }
+*/
 
 const reducer = () => {
-
+    
 }
 
-const ModelAttribute = () => {
-    return (
-        <div className="tensorflow-example">
+// This could be as
+// - 1. function ModelAttribute() { }
+// - 2. class ModelAttribute extends React.Component {
+//   render() {
+//       return(<div className=""></div>);
+//    };
+// }
+class ModelAttribute extends React.Component{
+    render(){
+        return(
+            <div className="tensorflow-example">
             <h2 className="Testing">
                 Testing
                 <p className="Testing-Ptag">
                     Testing..
                 </p>
             </h2>
-        </div>
-    );
+            </div>   
+        );
+    };
 }
+// const ModelAttribute = () => {
+//     return (
+//         <div className="tensorflow-example">
+//             <h2 className="Testing">
+//                 Testing
+//                 <p className="Testing-Ptag">
+//                     Testing..
+//                 </p>
+//             </h2>
+//         </div>
+//     );
+// }
 
 export default ModelAttribute;
