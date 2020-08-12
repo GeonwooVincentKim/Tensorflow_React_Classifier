@@ -4,6 +4,14 @@ import * as tf from '@tensorflow/tfjs';
 
 import './ModelAttribute.css';
 
+// Define rules that govern what transitions will happend
+// based on which events that are triggered.
+const stateMachine = {
+    iniital: {},
+    initial: {},
+    initial: {},
+}
+
 const ModelAttribute = () => {
     return (
         <div className="tensorflow-example">
