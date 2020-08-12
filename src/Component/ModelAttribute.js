@@ -12,7 +12,7 @@ const stateMachine = {
     // First, genereate first-initial,
     // and then generate five more after the initial-stage
     // not named 'initial'.
-    iniital: {},
+    iniital: { on: {} }, // Go to next-step naed loadingModel through 'on: {}'.
     loadingModel: {},
     awaiting: {},  // Waiting for upload data(images).
     ready: {},  // After waiting upload.
