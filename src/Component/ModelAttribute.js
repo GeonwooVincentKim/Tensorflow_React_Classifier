@@ -9,12 +9,15 @@ import './ModelAttribute.css';
 // Order of executing Training-Model and discriminate images.
 
 const stateMachine = {
-    iniital: { on: {next: 'loadingModel'} }, 
-    loadingModel: { on: {loadingModel: 'awaiting'}},
-    awaitingUpload: { on: {awaiting: 'ready'}},  // Waiting for upload data(images).
-    ready: { on: {awaiting: 'classifying'}},  // After waiting upload.
-    classifying: { on: {awaiting: 'complete'}},
-    complete: { on: {awating: 'awaitingUpload'}}, 
+    initial: 'initial',
+    states: {
+        iniital: { on: {next: 'loadingModel'} }, 
+        loadingModel: { on: {loadingModel: 'awaiting'}},
+        awaitingUpload: { on: {awaiting: 'ready'}},  // Waiting for upload data(images).
+        ready: { on: {awaiting: 'classifying'}},  // After waiting upload.
+        classifying: { on: {awaiting: 'complete'}},
+        complete: { on: {awating: 'awaitingUpload'}}, 
+    }
 }
 
 // A reducer that specifies how that's it's going to kind of like add the functionality 

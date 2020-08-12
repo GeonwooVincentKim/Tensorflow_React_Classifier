@@ -19,6 +19,7 @@
 - 2. This reducer will take the current state and it'll take an event which is going to be a string in this case.
 - 3. For example, when the event gets fired. (I'm not sure this case is suitable to this comment..)
 - 4. A reducer will take the current state and it'll take an event which is going to be a string in our case as a 'reducer' parameters.
+- 5. The reducer cause the app to be in a new state.
 
 ### Form of Reducer
 - 1. Applying Function.
