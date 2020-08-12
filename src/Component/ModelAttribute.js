@@ -35,6 +35,12 @@ const stateMachine = {
     complete: { on: {awating: 'awaitingUpload'}}, 
 }
 
+// A reducer that specifies how that's it's going to kind of like add the
+// functionality that will kind of wire those states together and allow the 
+// transitions to happen. 
+// For example, when I'd event gets fired. 
+// (I'm not sure this case is suitable to this comment..)
+
 const ModelAttribute = () => {
     return (
         <div className="tensorflow-example">
