@@ -17,31 +17,8 @@ const stateMachine = {
     complete: { on: {awating: 'awaitingUpload'}}, 
 }
 
-
-/* 
-    - 1. A reducer that specifies how that's it's going to kind of like add the
-    functionality that will kind of wire those states together and allow the
-    transitions to happen.
-
-    - 2. This reducer will take the current state and it'll take an event 
-         which is going to be a string in this case.
-
-    - 3. For example, when I'd event gets fired. (I'm not sure this case is suitable to this comment..)
-    
-    - 4. You can convert this code as 
-    function reducer() {
-
-    }
-    or
-    class reducer extends.React.Component{
-        render(){
-            return(
-                <div className="Example"></div>
-            );
-        }
-    }
-*/
-
+// A reducer that specifies how that's it's going to kind of like add the functionality 
+// that will kind of wire those states together and allow the transitions to happen.
 const reducer = () => {
     
 }
@@ -49,7 +26,7 @@ const reducer = () => {
 // This could be as
 // - 1. function ModelAttribute() { }
 // - 2. class ModelAttribute extends React.Component {
-//   render() {
+//    render() {
 //       return(<div className=""></div>);
 //    };
 // }
