@@ -29,10 +29,10 @@ const stateMachine = {
     */
     iniital: { on: {next: 'loadingModel'} }, 
     loadingModel: { on: {loadingModel: 'awaiting'}},
-    awaiting: { on: {awaiting: 'ready'}},  // Waiting for upload data(images).
+    awaitingUpload: { on: {awaiting: 'ready'}},  // Waiting for upload data(images).
     ready: { on: {awaiting: 'classifying'}},  // After waiting upload.
     classifying: { on: {awaiting: 'complete'}},
-    complete: { on: {awating: 'classifying'}}, 
+    complete: { on: {awating: 'awaitingUpload'}}, 
 }
 
 const ModelAttribute = () => {
