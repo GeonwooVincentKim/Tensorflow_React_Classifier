@@ -7,7 +7,6 @@ import './ModelAttribute.css';
 // Define rules that govern what transitions will happend
 // based on which events that are triggered.
 // Order of executing Training-Model and discriminate images.
-
 const stateMachine = {
     initial: 'initial',
     states: {
@@ -22,14 +21,14 @@ const stateMachine = {
 
 // A reducer that specifies how that's it's going to kind of like add the functionality 
 // that will kind of wire those states together and allow the transitions to happen.
-const reducer = (currentState, event) => {
+const reducer = (currentState, event) => 
     // Return state-machine States and then current-States with on event.
     // Or, Return Initial-States.
 
     // If is on the State, Return states-list,
     // Otherwise, Return initial which is not in states-list.
     stateMachine.states[currentState].on[event] || stateMachine.initial;
-}
+
 
 class ModelAttribute extends React.Component{
     render(){
