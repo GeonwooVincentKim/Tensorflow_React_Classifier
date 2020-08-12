@@ -25,6 +25,9 @@ const stateMachine = {
 const reducer = (currentState, event) => {
     // Return state-machine States and then current-States with on event.
     // Or, Return Initial-States.
+
+    // If is on the State, Return states-list,
+    // Otherwise, Return initial which is not in states-list.
     stateMachine.states[currentState].on[event] || stateMachine.initial;
 }
 
