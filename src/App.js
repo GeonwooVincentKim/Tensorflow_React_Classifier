@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ModelAttribute from './AI_Component/ModelAttribute';
+import ModelAttribute from './Component/ModelAttribute';
 
 import logo from './logo.svg';
 import './App.css';

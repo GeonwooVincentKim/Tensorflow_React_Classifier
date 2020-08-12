@@ -5,5 +5,11 @@ import * as tf from '@tensorflow/tfjs';
 import './ModelAttribute.css';
 
 const ModelAttribute = () => {
-    
+    return (
+        <div className="tensorflow-example">
+            
+        </div>
+    );
 }
+
+export default ModelAttribute;
