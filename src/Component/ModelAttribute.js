@@ -9,15 +9,22 @@ import './ModelAttribute.css';
 
 // Order of executing Training-Model and discriminate images.
 const stateMachine = {
-    // First, genereate first-initial,
-    // and then generate five more after the initial-stage
-    // not named 'initial'.
-    iniital: { on: {} }, // Go to next-step naed loadingModel through 'on: {}'.
-    loadingModel: {},
-    awaiting: {},  // Waiting for upload data(images).
-    ready: {},  // After waiting upload.
-    classifying: {},
-    complete: {},
+    /* 
+        First, genereate first-initial,
+        and then generate five more after the initial-stage
+        not named 'initial'.
+
+        Go to next-step naed loadingModel through 'on: {}'. 
+        The event called next so in each of my state objects
+        I need to specify which transition will happend based on the 
+        next event.
+    */
+    iniital: { on: {next: 'loadingModel'} }, 
+    loadingModel: { on: {loadingModel: 'awaiting'}},
+    awaiting: { on: {awaiting: 'ready'}},  // Waiting for upload data(images).
+    ready: { on: {awaiting: 'classifying'}},  // After waiting upload.
+    classifying: { on: {awaiting: 'complete'}},
+    complete: { on: {awating: 'awaiting'}},
 }
 
 const ModelAttribute = () => {
