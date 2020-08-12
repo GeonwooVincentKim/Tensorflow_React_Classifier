@@ -45,6 +45,7 @@
     }
     ```
 
+
 ## About ModelAttribute
 
 ### Form of ModelAttribute
@@ -60,8 +61,38 @@
     class ModelAttribute extends React.Component{
         render(){
             return(
-
+                <div className="classModelAttribute"></div>
             );
         };
+    }
+    ```
+
+- 3. Applying const
+    ```
+    const ModelAttribute = () => {
+        return(
+            <div className="constModelAttribute"></div>
+        );
+    }
+    ```
+
+### How to deal with if the 'ModelAttribute' is a default class(or const) of this file?
+- 1. Just named class as 
+    ```
+    class ModelAttribute extends React.Component{
+        render(){
+            return(
+                <div className="classModelAttribute"></div>
+            );
+        };
+    }
+    ```
+
+- 2. Just named const as
+    ```
+    const ModelAttribute = () => {
+        return(
+            <div className="constModelAttribute"></div>
+        );
     }
     ```
