@@ -7,7 +7,12 @@ import './ModelAttribute.css';
 const ModelAttribute = () => {
     return (
         <div className="tensorflow-example">
-            
+            <h2 className="Testing">
+                Testing
+                <p className="Testing-Ptag">
+                    Testing..
+                </p>
+            </h2>
         </div>
     );
 }
