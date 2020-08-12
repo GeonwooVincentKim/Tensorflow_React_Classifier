@@ -11,7 +11,7 @@ import './ModelAttribute.css';
 const stateMachine = {
     initial: 'initial',
     states: {
-        iniital: { on: {next: 'loadingModel'} }, 
+        initial: { on: {next: 'loadingModel'} }, 
         loadingModel: { on: {loadingModel: 'awaiting'}},
         awaitingUpload: { on: {awaiting: 'ready'}},  // Waiting for upload data(images).
         ready: { on: {awaiting: 'classifying'}},  // After waiting upload.
@@ -23,7 +23,9 @@ const stateMachine = {
 // A reducer that specifies how that's it's going to kind of like add the functionality 
 // that will kind of wire those states together and allow the transitions to happen.
 const reducer = (currentState, event) => {
-    
+    // Return state-machine States and then current-States with on event.
+    // Or, Return Initial-States.
+    stateMachine.states[currentState].on[event] || stateMachine.initial;
 }
 
 class ModelAttribute extends React.Component{
